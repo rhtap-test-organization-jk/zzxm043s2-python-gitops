@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: zzxm043s2-python-gitops
+  description: This is GitOps manifest for zzxm043s2-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: zzxm043s2-python
+    jenkins.io/job-full-name: zzxm043s2-python-gitops
+    backstage.io/kubernetes-id: zzxm043s2-python 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:zzxm043s2-python
